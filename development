@@ -1,0 +1,17 @@
+function nxdinit() {
+  cd ~/Sites/NXD/${1}/site;
+  composer update; 
+  cd ~/Sites/NXD/${1}/trellis; 
+  vagrant up;  
+  coda ~/Sites/NXD/${1}/site/web/app/; 
+  gittower ~/Sites/NXD/${1};  
+  cd ../site/web/app/themes/;
+  echo -e 'Run: \ncd <themedir>; gulp; gulp watch; OR \ncd <themedir>; grunt; grunt watch';
+}
+
+alias bhtt="cd ~/Sites/NXD/bht/trellis"
+alias bhtw="cd ~/Sites/NXD/bht/site/web/app/"
+alias timt="cd ~/Sites/NXD/timeline/trellis"
+alias timw="cd ~/Sites/NXD/timeline/site/web/app/"
+alias ajt=="cd ~/Sites/NXD/aj/trellis"
+alias ajw="cd ~/Sites/NXD/aj/site/web/app/"
